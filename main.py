@@ -4,9 +4,12 @@ from telebot import types
 import logging
 import time
 from datetime import datetime, date
+import os
+import requests
 
-# إعدادات البوت
-bot = telebot.TeleBot("8179581600:AAEIxHXruoCH_7eKinGe9zgXHsg25zyFdGk")
+# إعدادات البوت - استخدام متغير البيئة
+BOT_TOKEN = os.getenv('BOT_TOKEN', "8179581600:AAEIxHXruoCH_7eKinGe9zgXHsg25zyFdGk")
+bot = telebot.TeleBot(BOT_TOKEN)
 
 # إعداد التسجيل
 logging.basicConfig(level=logging.INFO)
